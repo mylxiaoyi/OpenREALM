@@ -19,7 +19,8 @@ find_package(catkin REQUIRED COMPONENTS
         realm_stages
         )
 
-find_package(OpenCV 3.3.1 EXACT)
+find_package(OpenCV)
+find_package(CGAL)
 find_package(cmake_modules REQUIRED)
 
 catkin_package(
@@ -46,6 +47,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 target_link_libraries(${PROJECT_NAME}
         ${catkin_LIBRARIES}
         ${OpenCV_LIBRARIES}
+        ${CGAL_LIB}
         ${cmake_modules_LIBRARIES}
         )
 add_dependencies(${PROJECT_NAME}

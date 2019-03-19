@@ -20,6 +20,7 @@
 
 #include <realm_vslam/geometric_referencer.h>
 #include <fstream>
+#include <numeric>
 
 using namespace realm;
 
